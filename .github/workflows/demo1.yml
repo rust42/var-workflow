@@ -20,3 +20,10 @@ jobs:
               here is step var1 $step_var1
       - name: Display environments
         run: env
+      - name: Set user_name Variable
+        run: echo "::set-env name=user_name::rusty_white"
+      - name: Set new_var variable
+        run: echo "::set-env name=new_var::newvarvalue"
+      - name: Using Variables
+        run: echo Hello, $user_name!
+              Welcome to $new_name!!
