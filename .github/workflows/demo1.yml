@@ -8,7 +8,13 @@ env:
 jobs:
   VariableUsageJobs:
     runs-on: ubuntu-latest
+    env: 
+      job_var1: "job variable value"
     steps:
       - name: Using Workflow Variables
+        env:
+          step_var1: Steep variable value
         run: echo Hello, $user_name!
               Welcome to $demo_name!!!   
+      - name: Display environments
+        run: env
