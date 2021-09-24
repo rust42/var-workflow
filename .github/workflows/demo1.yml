@@ -21,9 +21,9 @@ jobs:
       - name: Display environments
         run: env
       - name: Set user_name Variable
-        run: echo "::set-env name=user_name::rusty_white"
+        run: echo "user_name=rusty_white" >> $GITHUB_ENV
       - name: Set new_var variable
-        run: echo "::set-env name=new_var::newvarvalue"
+        run: echo "new_var=newvarvalue" >> $GITHUB_ENV
       - name: Using Variables
         run: echo Hello, $user_name!
-              Welcome to $new_name!!
+              Welcome to $new_var!!
